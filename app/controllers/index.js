@@ -1,6 +1,9 @@
 module.exports = {
     home: require('./HomeController'),
-    messages: require('./MessagesController'),
-    users: require('./UsersController'),
-    about: require('./AboutController'),
+    signup: require('./SignupController'),
+    register: require('./RegisterController'),
+    contact: require('./ContactController'),
+    checkout: require('./CheckoutController'),
+    products: require('./ProductsController'),
+    single: require('./SingleController')
 }
