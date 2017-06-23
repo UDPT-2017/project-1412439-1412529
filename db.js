@@ -20,7 +20,9 @@ pg.connect(function(err, client,done) {//ket noi db.cac cau lenh truy van duoc d
           }
           else{
 
-            console.log("sucess");
+            for(var i=0;i<result.rows.length;i++){
+              console.log(result.rows[i]);
+            }
 
           }
         });
