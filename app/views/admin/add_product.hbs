@@ -1,0 +1,177 @@
+<div id="page-wrapper">
+	<div class="main-page">
+		<div class="forms">
+			<h3 class="title1">
+				{{#if isEdit}} Edit Product {{product.productName}} {{else}} Add Product {{/if}}
+			</h3>
+			<div class="form-grids row widget-shadow" data-example-id="basic-forms">
+				<div class="form-title">
+					<h4>Chi Tiết Giày : {{product.productName}}</h4>
+					<p>{{{message}}}</p>
+					{{#if errors}}
+					<ul class="list-unstyled">
+						{{#each errors}}
+						<li class="warning">{{this.msg}}</li>
+						{{/each}}
+					</ul>
+					{{/if}}
+				</div>
+				<div class="form-body">
+					{{#if isEdit}}
+					<button class="btn btn-default" data-toggle="modal" data-target="#deleteModal">
+							<span class="glyphicon glyphicon-trash"></span>
+					</button>
+					<form method="post" id="add-product-form">
+						<input type="hidden" name="id" value="{{product._id}}" enctype="multipart/form-data"> {{else}}
+						<form action="/admin/product/add-product" id="add-product-form" method="post" enctype="multipart/form-data">
+							{{/if}}
+
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label>Tên Giày</label>
+										<input minlength="4" maxLength="50" value="{{product.productName}}" class="form-control" placeholder="Tên Giày" name="productName"
+										 required>
+									</div>
+
+									<div class="form-group">
+										<label>Nhãn Hiệu</label>
+										<select class="form-control" name="categoryName" required>
+											<option >Samsung</option>
+											<option >Apple</option>
+											<option >Sony</option>
+											<option >ASUS</option>
+											<option >OPPO</option>
+											<option >HTC</option>
+											<option >Philips</option>
+											<option >Nokia</option>
+											<option >Xiaomi</option>
+											<option >BlackBerry</option>
+										</select>
+									</div>
+
+									<div class="form-group">
+										<label>Giá</label>
+										<input type="number" value="{{product.price}}" min="100000" class="form-control" placeholder="Giá" name="price" required>
+									</div>
+
+									<div class="form-group">
+										<label>Số Lượng</label>
+										<input type="number" min="1" value="{{product.quantity}}" class="form-control" placeholder="Số Lượng" name="quantity" required>
+									</div>
+
+									{{#if isEdit}}
+									<div class="form-group">
+										<label>Số Lượng Tồn Kho</label>
+										<input type="number" min="0" value="{{product.inventory}}" class="form-control" placeholder="Số Lượng Tồn Kho" name="inventory"
+										 required>
+									</div>
+
+									<div class="form-group">
+										<label>Ngày Tạo</label>
+										<input type="text" value="{{product.created}}" class="form-control" disabled>
+									</div>
+									{{/if}}
+								</div>
+
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label class="form-label">Chú Thích</label>
+										<textarea class="form-control" name="note" rows="8" cols="20">{{product.description}}</textarea>
+									</div>
+
+									<div class="form-group">
+										<label class="form-label">Mô Tả</label>
+										<textarea class="form-control" name="description" rows="8" cols="20">{{product.note}}</textarea>
+									</div>
+								</div>
+
+								<div class="col-sm-4">
+									<div class="form-group">
+										<label>Hình Ảnh Phụ</label>
+										<input type="file" class="form-control" {{#if isEdit}} {{else}} required {{/if}} multiple="" id="files" name="images" accept="image/*"
+										 onchange="showImage('files','list-image','subImage')">
+										<ul id="list-image" class="list-inline list-unstyled">
+											{{#if isEdit}} {{#each product.subImage}}
+											<li><img width="100" src="/uploads/{{this}}" alt=""></li>
+											<input type="hidden" name="subImage" value="{{this}}"> {{/each}} {{/if}}
+										</ul>
+										<div id="selectedFiles"></div>
+									</div>
+								</div>
+							</div>
+							{{#if isEdit}}
+							<input type="submit" value="Update" class="btn btn-primary"> {{else}}
+							<input type="submit" value="Add" class="btn btn-primary"> {{/if}}
+
+						</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	var selDiv = "";
+
+	document.addEventListener("DOMContentLoaded", init, false);
+
+	function init() {
+		document.querySelector('#files').addEventListener('change', handleFileSelect, false);
+		selDiv = document.querySelector("#selectedFiles");
+	}
+
+	function handleFileSelect(e) {
+
+		if (!e.target.files || !window.FileReader) return;
+
+		selDiv.innerHTML = "";
+
+		var files = e.target.files;
+		var filesArr = Array.prototype.slice.call(files);
+		filesArr.forEach(function (f) {
+			if (!f.type.match("image.*")) {
+				return;
+			}
+
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var html = "<img width='150' src=\"" + e.target.result + "\">" + f.name + "<br clear=\"left\"/>";
+				selDiv.innerHTML += html;
+			}
+			reader.readAsDataURL(f);
+		});
+
+	}
+
+</script>
+
+<!-- Delete Modal -->
+<div id="deleteModal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Xóa <span id="productName">{{product.productName}}</span></h4>
+			</div>
+			<div class="modal-body">
+				<form action="/admin/xoa-san-pham" method="post">
+					<div class="form-group">
+						<label>Điền đầy đủ tên sản phẩm cần xóa!</label>
+						<input type="text" id="delete_product" class="form-control">
+						<input type="hidden" name="id" value="{{product._id}}">
+					</div>
+					<div class="form-group">
+						<button type="submit" disabled="true" id="btn_delete" class="btn btn-warning">Xóa</button>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>

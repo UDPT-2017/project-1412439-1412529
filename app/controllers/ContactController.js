@@ -1,7 +1,7 @@
 var contactController = {
 
     contact: function (req, res) {
-        res.render('contact/contact', {
+        res.render('user/contact', {
             title: 'Contact',
             message: '', 
         }

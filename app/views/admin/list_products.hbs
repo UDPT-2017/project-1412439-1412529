@@ -1,0 +1,40 @@
+<div id="page-wrapper">
+			<div class="main-page">
+				<div class="tables">
+					<h3 class="title1">Danh Sách</h3>
+					<h4>Danh Sách Sản Phẩm</h4>
+					<div class="panel-body widget-shadow" id="pagination_data">
+						<table class='table table-bordered'>
+							<thead>
+								<tr>
+								  <th>#</th>
+								  <th>Product Name</th>
+								  <th>Label</th>
+								  <th>Price</th>
+								  <th>Image</th>
+								  <th>Detail</th>
+								</tr>
+							</thead>
+							<tbody>
+								{{#each products}}
+								<tr>
+								  <td>#</td>
+								  <td>{{productName}}</td>
+								  <td>{{categoryName}}</td>
+								  <td>{{price}}</td>
+								  <td><img src="/uploads/{{mainImage}}" width="100"/></td>
+								  <td><a href="/admin/product/update-product/{{_id}}" class="btn btn-primary">Detail</a></td>
+								</tr>
+								{{/each}}
+							</tbody>
+						</table>
+
+						<!--Pagination -->
+						
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		

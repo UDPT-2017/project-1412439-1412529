@@ -1,7 +1,7 @@
 var registerController = {
 
     register: function (req, res) {
-        res.render('register/register', {
+        res.render('user/register', {
             title: 'Register',
             message: '', 
         }

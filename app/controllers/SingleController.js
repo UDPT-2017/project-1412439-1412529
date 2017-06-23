@@ -1,7 +1,7 @@
 var singleController = {
 
     single: function (req, res) {
-        res.render('single/single', {
+        res.render('user/single', {
             title: 'Single',
             message: '', 
         }

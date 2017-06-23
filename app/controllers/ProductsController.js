@@ -1,7 +1,7 @@
 var productsController = {
 
     products: function (req, res) {
-        res.render('products/products', {
+        res.render('user/products', {
             title: 'Products',
             message: '', 
         }

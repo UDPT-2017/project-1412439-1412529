@@ -24,14 +24,30 @@ module.exports = function (app) {
     
     var singleRouters = Router()
         .get('/single', controllers.single.single)
+    
+    var homeAdminRouters = Router()
+        .get('/admin', controllers.homeAdmin.homeAdmin)
+
+    var listproductsRouters = Router()
+        .get('/admin/product/list-product', controllers.listproducts.listproducts)
+    
+    var addproductsRouters = Router()
+        .get('/admin/product/add-product', controllers.addproducts.addproducts)
+    
+    var searchproductRouters = Router()
+        .get('/admin/product/search', controllers.search.search)
 
 
     app.use('/', homeRoutes);
     app.use('/', signupRouters);
-    app.use('/',registerRouters);
+    app.use('/', registerRouters);
     app.use('/', contactRouters);
     app.use('/', checkoutRouters);
     app.use('/', productsRouters);
     app.use('/', singleRouters);
+    app.use('/', homeAdminRouters);
+    app.use('/', listproductsRouters);
+    app.use('/', addproductsRouters);
+    app.use('/', searchproductRouters);
 
 }

@@ -1,7 +1,7 @@
 var checkoutController = {
 
     checkout: function (req, res) {
-        res.render('checkout/checkout', {
+        res.render('user/checkout', {
             title: 'Checkout',
             message: '', 
         }

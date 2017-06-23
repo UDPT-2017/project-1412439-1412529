@@ -1,13 +1,13 @@
 var homeController = {
     index: function (req, res) {
-        res.render('home/index', {
+        res.render('user/index', {
             title: 'Home',
             message: '',
         });
     },
 
     home: function (req, res) {
-        res.render('home/index', {
+        res.render('user/index', {
             title: 'Home',
             message: '', 
         }

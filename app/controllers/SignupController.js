@@ -1,7 +1,7 @@
 var signupController = {
 
     signup: function (req, res) {
-        res.render('signup/signup', {
+        res.render('user/signup', {
             title: 'Signup',
             message: '', 
         }

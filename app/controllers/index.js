@@ -5,5 +5,10 @@ module.exports = {
     contact: require('./ContactController'),
     checkout: require('./CheckoutController'),
     products: require('./ProductsController'),
-    single: require('./SingleController')
+    single: require('./SingleController'),
+    homeAdmin: require('./HomeAdminController'),
+    listproducts: require('./ListProductsController'),
+    addproducts: require('./AddProductsController'),
+    search: require('./SearchProductController')
+
 }
