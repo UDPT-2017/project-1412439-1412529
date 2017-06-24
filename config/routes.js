@@ -33,7 +33,7 @@ module.exports = function (app) {
 
     var addproductsRouters = Router()
         .get('/admin/product/add-product', controllers.addproducts.addproducts)
-        .post('/admin/product/add-product',upload.single('images'),controllers.addproducts.addproducts_post)
+        .post('/admin/product/add-product',upload.single('images'), controllers.addproducts.addproducts_post)
     var searchproductRouters = Router()
         .get('/admin/product/search', controllers.search.search)
 
