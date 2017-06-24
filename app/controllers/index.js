@@ -9,6 +9,7 @@ module.exports = {
     homeAdmin: require('./HomeAdminController'),
     listproducts: require('./ListProductsController'),
     addproducts: require('./AddProductsController'),
-    search: require('./SearchProductController')
+    search: require('./SearchProductController'),
+    update: require('./UpdateProductController')
 
 }
