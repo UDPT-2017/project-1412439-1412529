@@ -16,13 +16,13 @@
 								</tr>
 							</thead>
 							<tbody>
-								{{#each products}}
+								{{#each product}}
 								<tr>
-								  <td>#</td>
-								  <td>{{productName}}</td>
-								  <td>{{categoryName}}</td>
+								  <td>{{id}}</td>
+								  <td>{{name}}</td>
+								  <td>{{category}}</td>
 								  <td>{{price}}</td>
-								  <td><img src="/uploads/{{mainImage}}" width="100"/></td>
+								  <td><img src="/images/uploads/images{{id}}.jpg" width="100"/></td>
 								  <td><a href="/admin/product/update-product/{{_id}}" class="btn btn-primary">Detail</a></td>
 								</tr>
 								{{/each}}
@@ -30,11 +30,9 @@
 						</table>
 
 						<!--Pagination -->
-						
-						
+
+
 					</div>
 				</div>
 			</div>
 		</div>
-
-		

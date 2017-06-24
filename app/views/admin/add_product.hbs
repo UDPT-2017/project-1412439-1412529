@@ -1,7 +1,14 @@
 <div id="page-wrapper">
+	<div>
+		<form action="http://localhost:3000/upload" method="post" enctype="multipart/form-data"  >
+			<input type="file" name="file"><br/>
+			<input type="submit" value="upload">
+		</form>
+	</div>
 	<div class="main-page">
 		<div class="forms">
 			<h3 class="title1">
+
 				{{#if isEdit}} Edit Product {{product.productName}} {{else}} Add Product {{/if}}
 			</h3>
 			<div class="form-grids row widget-shadow" data-example-id="basic-forms">
@@ -77,12 +84,12 @@
 								<div class="col-sm-4">
 									<div class="form-group">
 										<label class="form-label">Chú Thích</label>
-										<textarea class="form-control" name="note" rows="8" cols="20">{{product.description}}</textarea>
+										<textarea class="form-control" name="note" rows="8" cols="20"  required>{{product.description}}</textarea>
 									</div>
 
 									<div class="form-group">
 										<label class="form-label">Mô Tả</label>
-										<textarea class="form-control" name="description" rows="8" cols="20">{{product.note}}</textarea>
+										<textarea class="form-control" name="description" rows="8" cols="20"  required>{{product.note}}</textarea>
 									</div>
 								</div>
 
