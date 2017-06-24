@@ -36,6 +36,8 @@ module.exports = function (app) {
         .post('/admin/product/add-product',upload.single('images'),controllers.addproducts.addproducts_post)
     var searchproductRouters = Router()
         .get('/admin/product/search', controllers.search.search)
+    var updateProductRouters = Router()
+        .get('/admin/product/update-product', controllers.update.update)
 
 
     app.use('/', homeRoutes);
@@ -49,5 +51,6 @@ module.exports = function (app) {
     app.use('/', listproductsRouters);
     app.use('/', addproductsRouters);
     app.use('/', searchproductRouters);
+    app.use('/', updateProductRouters);
 
 }
