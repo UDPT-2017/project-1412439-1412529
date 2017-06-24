@@ -7,8 +7,15 @@
                 <a href="index">N-AIR</a>
             </div>
             <div class="login-bars">
-                <a class="btn btn-default log-bar" href="register" role="button">Sign up</a>
-                <a class="btn btn-default log-bar" href="signup" role="button">Login</a>
+              {{#if user}}
+              <a class="btn btn-default log-bar" href="register" role="button" id="bt_logout">Logout</a>
+                <a class="btn btn-default log-bar" href="register" role="button">Register</a>
+              {{else}}
+              <a class="btn btn-default log-bar" href="register" role="button">Register</a>
+              <a class="btn btn-default log-bar" href="signup" role="button">Login</a>
+              {{/if}}
+
+
                 <div class="cart box_1">
                     <a href="checkout">
                         <h3>

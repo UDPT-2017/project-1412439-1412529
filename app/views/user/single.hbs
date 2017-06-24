@@ -44,6 +44,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 animation: "slide",
                 controlNav: "thumbnails"
             });
+
+
         });
     </script>
     <!-- //FlexSlider-->
@@ -130,8 +132,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <ul>
                         <li class="ad-2-crt simpleCart_shelfItem">
-                            <a class="btn item_add" href="#" role="button">Add To Cart</a>
-                            <a class="btn" href="#" role="button">Buy Now</a>
+                          {{#if user}}
+                          <a class="btn item_add" href="#" role="button" >Add To Cart</a>
+                          <a class="btn" href="#" role="button" >Buy Now</a>
+
+                            {{else}}
+                            <a class="btn item_add" href="#" role="button" style="display:none">Add To Cart</a>
+                            <a class="btn" href="#" role="button" style="display:none">Buy Now</a>
+                            {{/if}}
                         </li>
                     </ul>
                 </div>

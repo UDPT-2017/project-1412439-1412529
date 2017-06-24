@@ -22,10 +22,39 @@
         </div>
         <div class="row">
             {{>footer}}
-        </div> 
+        </div>
     </div>
     <script src="/js/jquery.min.js" charset="utf-8"></script>
     <script src="/js/bootstrap.min.js" charset="utf-8"></script>
+    <script>
+    $(document).ready(function(){
+      $("#bt_logout").click(function(){
+        //alert("gg");
+        $.ajax({
+type: 'POST',
+url: '/logout',
+success: function(data) {
+  if(data=="1"){
+
+  }
+    else
+    {
+
+    }
+  }
+  ,
+error:function(jqXHR,textStatus,errorThrown){
+
+console.log(textStatus);
+console.log(errorThrown);
+}
+
+      });
+      });
+
+});
+
+    </script>
 </body>
 
 </html>

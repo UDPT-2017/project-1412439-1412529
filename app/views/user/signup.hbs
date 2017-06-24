@@ -47,6 +47,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 animation: "slide",
                 controlNav: "thumbnails"
             });
+            ///////////////////////////////////
+
+            //////////////////////////////////
         });
     </script>
     <!-- //FlexSlider-->
@@ -71,11 +74,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="strip"></div>
                     <p>Welcome, please enter the following to continue.</p>
                     <p>If you have previously Login with us, <a href="#">Click Here</a></p>
-                    <form>
+                    <form action="/signup_form" method='post'>
                         <h5>User Name:</h5>
-                        <input type="text" value="">
+                        <input type="text" value="" name="user_name" required>
                         <h5>Password:</h5>
-                        <input type="password" value=""><br>
+                        <input type="password" value="" name="password" required><br>
                         <input type="submit" value="Login">
 
                     </form>
@@ -84,7 +87,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <a class="btn btn-block btn-social btn-facebook">
                          <span class="fa fa-facebook"></span> Sign in with Facebook
                     </a>
-                    
+
                 </div>
                 <div class="col-md-6 login-right">
                     <h3>New Registration</h3>
