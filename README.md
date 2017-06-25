@@ -5,12 +5,12 @@
 Thành viên:
 * [x] **1412439** - Nguyễn Hoàng Quân - NguyenHoangQuan2503 - nhquan.fit.hcmus@gmail.com - Tỉ lệ đóng góp cho đề tài
 * [x] **1412529** -Bạch Thiên Quốc Minh Thông - bachthong - bachthienquocminhthong@gmail.com - Tỉ lệ đóng góp cho đề tài
-* [x] **1412270** - Lưu Trần Anh Kiệt - kietluu007 - tuilaanhkiet@gmail.com - Tỉ lệ đóng góp cho đề tài
+* [x] **MSSV3** - Tên sinh viên 3 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
 * [ ] **MSSV4** - Tên sinh viên 4 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
 
 URL: **https://project-webshoes.herokuapp.com**
 
-Báo cáo: **https://nguyenhoangquan2503.github.io/BaoCaoDoAn**
+Báo cáo: **https://github.com/NguyenHoangQuan2503/BaoCaoDoAn/wiki/B%C3%A1o-c%C3%A1o--%C4%91%E1%BB%93-%C3%A1n-cu%E1%BB%91i-k%C3%AC**
 
 ## Yêu cầu
 
