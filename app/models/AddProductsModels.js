@@ -36,8 +36,6 @@ addproducts:function(req,res,next){
                 if(err){
                   res.send("THÊM SẢN PHẨM KHÔNG THÀNH CÔNG!!!");
                   console.log(err);
-
-
                 }
                 else{
 

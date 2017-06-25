@@ -12,4 +12,5 @@ module.exports = {
     search: require('./SearchProductController'),
     update: require('./UpdateProductController'),
     delete: require('./deleteProductController'),
+    send404: require('./send404Controller')
 }

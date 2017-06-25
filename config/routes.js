@@ -79,7 +79,8 @@ module.exports = function (app) {
     var updateProductRouters = Router()
         .get('/admin/product/update-product',admin,controllers.update.update)
         .get('/admin/product/delete-product/:id', controllers.delete.deleteProduct)
-
+    var send404Routers = Router()
+        .get('/404-error',client, controllers.send404.send404)
 
     app.use('/', homeRoutes);
     app.use('/', signupRouters);
@@ -93,5 +94,6 @@ module.exports = function (app) {
     app.use('/', addproductsRouters);
     app.use('/', searchproductRouters);
     app.use('/', updateProductRouters);
+    app.use('/', send404Routers);
 
 }

@@ -48,7 +48,10 @@ var listProductsModels={
               client.query(query, function (err, result) {//truy van,neu co ket qua se tra ve trong bien result
                 done();
               if(err){
-
+                //404 error
+                res.render('user/404-error', {
+                  title: '404-error'
+                });
                 console.log(err);
 
 

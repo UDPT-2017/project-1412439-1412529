@@ -26,7 +26,7 @@ var signupModels={
               client.query(query, function (err, result) {//truy van,neu co ket qua se tra ve trong bien result
                 done();
               if(err){
-
+                //res.redirect('/404-error');
                 console.log(err);
                 res.send("loi truy van");
 

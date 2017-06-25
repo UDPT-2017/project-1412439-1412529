@@ -5,7 +5,7 @@ var deleteProduct = {
     console.log('Xoa san pham ' + req.params.id);
     pg.connect(function(err, client, done) {//ket noi db.cac cau lenh truy van duoc dat trong ham connect
       if(err){
-
+  
          console.log(err);
        }
       client.query("delete from products where id = '" + req.params.id + "'", function(err, result) {

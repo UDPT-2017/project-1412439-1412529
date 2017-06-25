@@ -1884,3 +1884,100 @@ div textarea {
     }
 }
 
+
+/*--/404--*/
+.error_page {
+       background: #00C6D7;
+    position: relative;
+    padding: 11em 0;
+    width: 100%
+}
+.error-top {
+   text-align: center;
+   margin: 7em auto;
+       background: #fff;
+    padding: 2em 2em;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border: 1px solid rgba(213, 213, 214, 0.85);
+    width: 30%;
+    padding: 2em 2em;
+	position: absolute;
+    left: 35%;
+    top: 13%;
+}
+.error-top h3{
+      font-size: 9em;
+    font-weight: bold;
+    margin: 0;
+    color: #052963;
+}
+.error-top h3 i{
+    font-size: 113px;
+    color: #00c6d7;
+}
+.error-top span {
+  font-size: 1.5em;
+  color:#333;
+}
+.error-top p{
+    font-size: 0.95em;
+    font-weight: 400;
+    color: #777;
+	margin: 10px 0;
+}
+a.read.fourth {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 0.6em 1em;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 1em;
+    background:#00c6d7;
+}
+a.read.fourth:hover{
+ background:#052963;
+}
+
+.footer {
+    text-align: center;
+    margin: 18em 0 2em 0;
+}
+.footer.sign {
+    margin: 21em 0 2em 0;
+}
+footer {
+    background:#00C6D7;
+    padding: 12px;
+    width: 100%;
+    border-top: 1px solid #00C6D7;
+    text-align:center;
+    position: fixed;
+    bottom: 0;
+	z-index: 999;
+}
+footer  p {
+	color: #fff;
+    font-size: 1em;
+	padding-right: 252px;
+	margin: 0;
+}
+.footer p {
+	color: #333;
+    font-size: 1em;
+	    margin-top: 1em;
+}
+.footer p a{
+	color:#00C6D7;
+}
+
+footer  p a{
+	color:#002561;
+}
+footer  p a:hover ,.footer p a:hover{
+	text-decoration:underline;
+}

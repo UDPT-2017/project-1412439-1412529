@@ -5,7 +5,7 @@ var searchProduct = {
     console.log('Dang tim san pham' + req.param('s'));
     pg.connect(function(err, client, done) {//ket noi db.cac cau lenh truy van duoc dat trong ham connect
       if(err){
-
+        
          console.log(err);
        }
       client.query("select * from products where name like '%" + req.param('s') + "%'", function(err, result) {
