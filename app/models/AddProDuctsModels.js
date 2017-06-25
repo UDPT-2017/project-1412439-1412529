@@ -45,7 +45,12 @@ addproducts:function(req,res,next){
                   //var str='img'+result.rows.length;
                   //cb(null,str);
                     console.log('success');
-                    res.send("THEM SAN PHAM THANH CONG");
+                    //res.send("THEM SAN PHAM THANH CONG");
+                    res.render('admin/list_products', {
+                        product:result.rows,
+                        title: 'List Products',
+                        layout: 'layout_admin',
+                    });
                   //}
 
                 }
