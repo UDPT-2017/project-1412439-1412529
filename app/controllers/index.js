@@ -10,6 +10,6 @@ module.exports = {
     listproducts: require('./ListProductsController'),
     addproducts: require('./AddProductsController'),
     search: require('./SearchProductController'),
-    update: require('./UpdateProductController')
-
+    update: require('./UpdateProductController'),
+    delete: require('./deleteProductController')
 }

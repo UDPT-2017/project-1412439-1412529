@@ -78,6 +78,7 @@ module.exports = function (app) {
         .get('/admin/product/search',admin,controllers.search.search)
     var updateProductRouters = Router()
         .get('/admin/product/update-product',admin,controllers.update.update)
+        .get('/admin/product/delete-product/:id', controllers.delete.deleteProduct)
 
 
     app.use('/', homeRoutes);

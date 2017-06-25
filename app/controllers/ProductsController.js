@@ -1,13 +1,9 @@
+var models = require('../models');
+
 var productsController = {
-
-    products: function (req, res) {
-        res.render('user/products', {
-            title: 'Products',
-            message: '', 
-        }
-
-        );
-    }
+	products: function(req, res){
+    	models.listproducts.listproductsuser(req, res);
+	}
 }
 
 module.exports = productsController;

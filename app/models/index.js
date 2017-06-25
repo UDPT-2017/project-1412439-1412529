@@ -3,4 +3,6 @@ module.exports = {
     addproducts:require('./AddProductsModels'),
     register:require('./RegisterModels'),
     signup:require('./SignupModels'),
+    deleteProducts: require('./deleteProduct'),
+    searchProducts: require('./searchProduct'),
 }
