@@ -17,6 +17,7 @@ var registerController = {
 
        req.session.destroy();
        req.app.locals.user=false;
+       res.redirect('/signup');
       // res.send("gg");
       // res.render('user/signup');
     }

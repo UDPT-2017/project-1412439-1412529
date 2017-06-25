@@ -3,7 +3,7 @@ var addProductsModels={
 addproducts:function(req,res,next){
   pg.connect(function(err, client,done) {//ket noi db.cac cau lenh truy van duoc dat trong ham connect
         if(err){
-
+          res.send("Không kết nối được dữ liệu,mời bạn thử lại sau");
            console.log(err);
          }
          else{//ket noi thanh cong
@@ -17,7 +17,7 @@ addproducts:function(req,res,next){
           client.query(query1, function (err, result) {//truy van,neu co ket qua se tra ve trong bien result
             done();
           if(err){
-
+            res.send("Không kết nối được dữ liệu,mời bạn thử lại sau");
             console.log(err);
 
 
@@ -27,14 +27,14 @@ addproducts:function(req,res,next){
             //for(var i=0;i<result.rows.length;i++){
             //var str='img'+result.rows.length;
             //cb(null,str);
-            id=result.rows.length;
+            id=result.rows[result.rows.length-1].id;
               console.log('success');
               var query="insert into products values("+id+",'"+req.body.categoryName+"','"+req.body.productName+"',"+req.body.price+",'"+req.body.description+"','"+req.body.note+"')"
               console.log(query);
                 client.query(query, function (err, result) {//truy van,neu co ket qua se tra ve trong bien result
                   done();
                 if(err){
-
+                  res.send("THÊM SẢN PHẨM KHÔNG THÀNH CÔNG!!!");
                   console.log(err);
 
 
@@ -46,11 +46,8 @@ addproducts:function(req,res,next){
                   //cb(null,str);
                     console.log('success');
                     //res.send("THEM SAN PHAM THANH CONG");
-                    res.render('admin/list_products', {
-                        product:result.rows,
-                        title: 'List Products',
-                        layout: 'layout_admin',
-                    });
+
+                    res.redirect('/admin/product/list-product');
                   //}
 
                 }

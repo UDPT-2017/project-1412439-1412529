@@ -38,10 +38,7 @@ var signupModels={
                   req.session.user=req.body.user_name;
                   //flag1=true;
                   req.app.locals.user=true;
-                  res.render('user/index', {
-                      title: 'Home',
-                      message: '',
-                  });
+                  res.redirect('/');
               }
               else{
                 ///////////////////////////////////////////////////////
@@ -63,10 +60,7 @@ var signupModels={
                  req.app.locals.user=true;
                  req.session.user=req.body.user_name;
                  req.session.admin=true;
-                 res.render('admin/homeAdmin', {
-                     title: 'Admin Pages',
-                     layout: 'layout_admin',
-                 });
+                 res.redirect('/admin');
                }
                else{
                 res.send("tai khoan hoac mat khau khong chinh xac");
