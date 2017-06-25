@@ -34,7 +34,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--script-->
     <!-- FlexSlider -->
     <script src="/js/imagezoom.js"></script>
-    <script defer src="js/jquery.flexslider.js"></script>
+    <script defer src="/js/jquery.flexslider.js"></script>
     <link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" />
 
     <script>
@@ -66,18 +66,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-md-8 showcase">
                 <div class="flexslider">
                     <ul class="slides">
-                        <li data-thumb="images/show.jpg">
-                            <div class="thumb-image"> <img src="images/show.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                        <li data-thumb="/images/uploads/images{{product.id}}.png">
+                            <div class="thumb-image"> <img src="/images/uploads/images{{product.id}}.png" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
-                        <li data-thumb="images/show1.jpg">
-                            <div class="thumb-image"> <img src="images/show1.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
-                        <li data-thumb="images/show2.jpg">
-                            <div class="thumb-image"> <img src="images/show2.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
-                        <li data-thumb="images/show3.jpg">
-                            <div class="thumb-image"> <img src="images/show3.jpg" data-imagezoom="true" class="img-responsive"> </div>
-                        </li>
+                        
                     </ul>
                     <div class="clearfix"></div>
                 </div>
@@ -85,9 +77,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-md-4 showcase">
                 <div class="showcase-rt-top">
                     <div class="pull-left shoe-name">
-                        <h3>Nike Air Max 2015</h3>
-                        <p>Men's running shoes</p>
-                        <h4>&#36;190</h4>
+                        <h3>{{product.name}}</h3>
+                        <p>{{product.category}}</p>
+                        <h4>&#36;{{product.price}}</h4>
                     </div>
                     <div class="pull-left rating-stars">
                         <ul>
@@ -207,7 +199,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <!-- normal -->
                 <div class="ih-item square effect3 bottom_to_top">
                     <div class="bottom-2-top">
-                        <div class="img"><img src="images/grid4.jpg" alt="/" class="img-responsive gri-wid"></div>
+                        <div class="img"><img src="/images/grid4.jpg" alt="/" class="img-responsive gri-wid"></div>
                         <div class="info">
                             <div class="pull-left styl-hdn">
                                 <h3>style 01</h3>
@@ -228,7 +220,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <!-- normal -->
                 <div class="ih-item square effect3 bottom_to_top">
                     <div class="bottom-2-top">
-                        <div class="img"><img src="images/grid6.jpg" alt="/" class="img-responsive gri-wid"></div>
+                        <div class="img"><img src="/images/grid6.jpg" alt="/" class="img-responsive gri-wid"></div>
                         <div class="info">
                             <div class="pull-left styl-hdn">
                                 <h3>style 01</h3>
@@ -249,7 +241,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <!-- normal -->
                 <div class="ih-item square effect3 bottom_to_top">
                     <div class="bottom-2-top">
-                        <div class="img"><img src="images/grid3.jpg" alt="/" class="img-responsive gri-wid"></div>
+                        <div class="img"><img src="/images/grid3.jpg" alt="/" class="img-responsive gri-wid"></div>
                         <div class="info">
                             <div class="pull-left styl-hdn">
                                 <h3>style 01</h3>

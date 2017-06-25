@@ -12,5 +12,4 @@ module.exports = {
     search: require('./SearchProductController'),
     update: require('./UpdateProductController'),
     delete: require('./deleteProductController'),
-    single: require('./SingleController')
 }
