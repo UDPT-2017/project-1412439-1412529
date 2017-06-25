@@ -44,6 +44,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 animation: "slide",
                 controlNav: "thumbnails"
             });
+            $("#bt_buy").click(function(e){
+              //////////////////////////////////////////////////////////////
+              var mydata={};
+              mydata.id_product={{product.id}};
+              mydata.price={{product.price}};
+              mydata.status=1;
+              var date=new Date();
+              var date1=date.getFullYear().toString()+'/'+(date.getMonth()+1).toString()+'/'+date.getDate().toString()
+              mydata.date=date1;
+
+              //mydata.date=
+
+              $.ajax({
+    type: 'POST',
+    data: JSON.stringify(mydata),
+    contentType: 'application/json',
+    url: '/buy',
+    success: function(data) {
+        if(data=="1"){
+          alert("Đặt hàng thành công");
+          //console.log("sucess");
+
+        }
+          else
+          {
+            alert("Đặt hàng thất bại");
+          }
+        }
+        ,
+    error:function(jqXHR,textStatus,errorThrown){
+
+      console.log(textStatus);
+      console.log(errorThrown);
+    }
+
+  });
+              //////////////////////////////////////////////////////////////
+            });
 
 
         });
@@ -69,7 +107,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <li data-thumb="/images/uploads/images{{product.id}}.png">
                             <div class="thumb-image"> <img src="/images/uploads/images{{product.id}}.png" data-imagezoom="true" class="img-responsive"> </div>
                         </li>
-                        
+
                     </ul>
                     <div class="clearfix"></div>
                 </div>
@@ -126,7 +164,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <li class="ad-2-crt simpleCart_shelfItem">
                           {{#if user}}
                           <a class="btn item_add" href="#" role="button" >Add To Cart</a>
-                          <a class="btn" href="#" role="button" >Buy Now</a>
+                          <a class="btn" role="button" id="bt_buy" >Buy Now</a>
 
                             {{else}}
                             <a class="btn item_add" href="#" role="button" style="display:none">Add To Cart</a>

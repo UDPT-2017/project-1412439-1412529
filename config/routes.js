@@ -61,7 +61,7 @@ module.exports = function (app) {
 
   var productsRouters = Router()
       .get('/products',client,controllers.products.products)
-
+      .post('/buy',jsonParser,controllers.products.buy)
   var singleRouters = Router()
       .get('/single/:id',client,controllers.single.single)
 
@@ -76,6 +76,7 @@ module.exports = function (app) {
       .post('/admin/product/add-product',admin,upload.single('images'),controllers.addproducts.addproducts_post)
     var searchproductRouters = Router()
         .get('/admin/product/search',admin,controllers.search.search)
+        .get('/admin/list_orders',admin,controllers.addproducts.list_orders)
     var updateProductRouters = Router()
         .get('/admin/product/update-product',admin,controllers.update.update)
         .get('/admin/product/delete-product/:id', controllers.delete.deleteProduct)
