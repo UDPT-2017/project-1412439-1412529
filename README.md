@@ -4,7 +4,7 @@
 
 Thành viên:
 * [x] **1412439** - Nguyễn Hoàng Quân - NguyenHoangQuan2503 - nhquan.fit.hcmus@gmail.com - Tỉ lệ đóng góp cho đề tài
-* [x] **MSSV2** - Tên sinh viên 2 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
+* [x] **1412529** -Bạch Thiên Quốc Minh Thông - bachthong - bachthienquocminhthong@gmail.com - Tỉ lệ đóng góp cho đề tài
 * [x] **MSSV3** - Tên sinh viên 3 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
 * [ ] **MSSV4** - Tên sinh viên 4 - tên tài khoản github - email - Tỉ lệ đóng góp cho đề tài
 
