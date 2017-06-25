@@ -11,5 +11,6 @@ module.exports = {
     addproducts: require('./AddProductsController'),
     search: require('./SearchProductController'),
     update: require('./UpdateProductController'),
-    delete: require('./deleteProductController')
+    delete: require('./deleteProductController'),
+    single: require('./SingleController')
 }

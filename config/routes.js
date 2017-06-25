@@ -63,7 +63,7 @@ module.exports = function (app) {
       .get('/products',client,controllers.products.products)
 
   var singleRouters = Router()
-      .get('/single',client,controllers.single.single)
+      .get('/single/:id',client,controllers.single.single)
 
   var homeAdminRouters = Router()
       .get('/admin',admin,controllers.homeAdmin.homeAdmin)

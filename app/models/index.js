@@ -5,4 +5,5 @@ module.exports = {
     signup:require('./SignupModels'),
     deleteProducts: require('./deleteProduct'),
     searchProducts: require('./searchProduct'),
+    singleProduct: require('./singleModel')
 }
